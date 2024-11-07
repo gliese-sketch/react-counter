@@ -3,10 +3,10 @@ import Counter from "./Counter";
 
 function App() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen gap-2">
-      <Counter />
-      <Counter />
-      <Counter />
+    <main className="container">
+      <Counter start={10} danger />
+      <Counter step={12} />
+      <Counter start="50" step={10} />
     </main>
   );
 }
