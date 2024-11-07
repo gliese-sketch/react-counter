@@ -4,7 +4,7 @@ This is a simple counter app built with React.
 
 ## Features
 
-- Uses React Hooks for state management
+- Uses `useState` for state management
 - Displays the current count
 - Allows incrementing and decrementing the count
 - Supports dangerous mode
@@ -22,7 +22,7 @@ You can customize the counter by modifying the `Counter` component in the `src/C
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/react-counter.git
+git clone https://github.com/gliese-sketch/react-counter.git
 ```
 
 2. Navigate to the project directory:
