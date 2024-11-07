@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Counter() {
-  const [stateValue, func] = useState(10);
+  const [counter, setCounter] = useState(0);
 
-  const handleClick = () => {
-    func(100);
+  const handleClick = (type) => {
+    if (type === "minus") {
+      setCounter(counter - 1);
+      return;
+    }
+
+    setCounter(counter + 1);
   };
 
   return (
-    <div className="flex gap-4 text-5xl items-center justify-center border-4 p-3">
-      <button className="btn" onClick={handleClick}>
+    <div className="flex items-center gap-4 border p-1">
+      <button className="btn" onClick={() => handleClick("minus")}>
         -
       </button>
-      <p>{stateValue}</p>
-      <button className="btn" onClick={handleClick}>
+      <p className="text-4xl font-bold">{counter}</p>
+      <button className="btn" onClick={() => handleClick()}>
         +
       </button>
     </div>
